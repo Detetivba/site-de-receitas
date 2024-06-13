@@ -1,4 +1,4 @@
-
+/* Reset de estilos básicos */
 * {
     margin: 0;
     padding: 0;
@@ -8,9 +8,9 @@
 /* Estilos gerais */
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
     background-color: #f8f9fa;
     color: #343a40;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
 }
@@ -23,9 +23,10 @@ body {
 }
 
 header {
-    background-color: #343a40;
+    background-color: #ff9913;
     color: #fff;
     padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header .container {
@@ -41,95 +42,185 @@ header h1 {
 
 nav ul {
     list-style-type: none;
+    display: flex;
+    align-items: center;
 }
 
 nav ul li {
-    display: inline-block;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     padding: 10px 15px;
-    transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover {
-    background-color: #5a6268;
-    border-radius: 4px;
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.search-bar input {
+    border: 1px solid #ced4da;
+    border-radius: 4px 0 0 4px;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.search-bar button {
+    border: 1px solid #ced4da;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    padding: 5px 10px;
+    background-color: #343a40;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
 main {
-    padding: 20px 0;
-}
-
-.recipes-list {
-    background-color: #f8f9fa;
     padding: 40px 0;
 }
 
-.recipes-list .container {
+.intro {
     text-align: center;
-}
-
-.recipes-list h2 {
+    padding: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
-    font-size: 2.8rem;
-    color: #343a40;
 }
 
-.recipe-cards {
+.categories, .recipes-overview {
+    margin-bottom: 40px;
+}
+
+.category-grid, .recipe-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    list-style: none;
-    padding: 0;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.recipe-cards li {
-    width: 300px;
-    margin: 20px;
+.category, .recipe-card {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(33.333% - 20px);
+    text-align: center;
 }
 
-.recipe-cards li:hover {
+.category:hover, .recipe-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.recipe-cards li img {
+.category img, .recipe-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
 }
 
-.recipe-cards li .recipe-info {
-    padding: 20px;
-}
-
-.recipe-cards li h3 {
-    margin-bottom: 10px;
-    font-size: 2rem;
+.category h3, .recipe-card h3 {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5rem;
     color: #343a40;
 }
 
-.recipe-cards li p {
-    font-size: 1.4rem;
-    color: #6c757d;
-    line-height: 1.5;
+.recipe-info {
+    padding: 15px;
 }
 
 footer {
-    background-color: #343a40;
+    background-color: #ff9913;
     color: #fff;
     text-align: center;
     padding: 15px 0;
 }
 
+@media (max-width: 768px) {
+    .category, .recipe-card {
+        width: calc(50% - 20px);
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .search-bar {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .search-bar input {
+        width: 70%;
+    }
+
+    .search-bar button {
+        width: 30%;
+    }
+}
+
+@media (max-width: 480px) {
+    .category, .recipe-card {
+        width: 100%;
+    }
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .search-bar input {
+        width: 70%;
+    }
+
+    .search-bar button {
+        width: 30%;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+a h3 {
+    color: #ff9913;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.search-input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.results {
+    margin-top: 20px;
+}
+
+.result-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
