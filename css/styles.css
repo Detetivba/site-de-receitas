@@ -1,11 +1,8 @@
-/* Reset de estilos básicos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-/* Estilos gerais */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f8f9fa;
@@ -13,62 +10,53 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
-
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
-
 header {
     background-color: #ff9913;
     color: #fff;
     padding: 15px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 header h1 {
     font-size: 2.5rem;
     margin-left: 20px;
 }
-
 nav ul {
     list-style-type: none;
     display: flex;
     align-items: center;
 }
-
 nav ul li {
     margin: 0 15px;
 }
-
 nav ul li a {
     color: #fff;
     text-decoration: none;
     padding: 10px 15px;
 }
-
 .search-bar {
     display: flex;
     align-items: center;
     margin-left: 15px;
 }
-
 .search-bar input {
     border: 1px solid #ced4da;
     border-radius: 4px 0 0 4px;
     padding: 5px;
     font-size: 1rem;
 }
-
 .search-bar button {
     border: 1px solid #ced4da;
     border-left: none;
@@ -79,11 +67,9 @@ nav ul li a {
     cursor: pointer;
     font-size: 1rem;
 }
-
 main {
     padding: 40px 0;
 }
-
 .intro {
     text-align: center;
     padding: 20px 0;
@@ -91,18 +77,15 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
 }
-
 .categories, .recipes-overview {
     margin-bottom: 40px;
 }
-
 .category-grid, .recipe-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
 }
-
 .category, .recipe-card {
     background-color: #fff;
     border-radius: 8px;
@@ -112,88 +95,71 @@ main {
     width: calc(33.333% - 20px);
     text-align: center;
 }
-
 .category:hover, .recipe-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
 .category img, .recipe-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
-
 .category h3, .recipe-card h3 {
     padding: 15px;
     text-align: center;
     font-size: 1.5rem;
     color: #343a40;
 }
-
 .recipe-info {
     padding: 15px;
 }
-
 footer {
     background-color: #ff9913;
     color: #fff;
     text-align: center;
     padding: 15px 0;
 }
-
 @media (max-width: 768px) {
     .category, .recipe-card {
         width: calc(50% - 20px);
     }
-
     nav ul {
         flex-direction: column;
         text-align: center;
     }
-
     nav ul li {
         margin-bottom: 10px;
     }
-
     .search-bar {
         margin-top: 10px;
         margin-left: 0;
     }
-
     .search-bar input {
         width: 70%;
     }
-
     .search-bar button {
         width: 30%;
     }
 }
-
 @media (max-width: 480px) {
     .category, .recipe-card {
         width: 100%;
     }
-
     header .container {
         flex-direction: column;
         text-align: center;
     }
-
     .search-bar {
         width: 100%;
         margin-top: 10px;
     }
-
     .search-bar input {
         width: 70%;
     }
-
     .search-bar button {
         width: 30%;
     }
 }
-
 a{
     text-decoration: none;
 }
@@ -205,7 +171,6 @@ a h3 {
     align-items: center;
     margin: 20px;
 }
-
 .search-input {
     width: 300px;
     padding: 10px;
@@ -213,11 +178,9 @@ a h3 {
     border-radius: 4px;
     outline: none;
 }
-
 .results {
     margin-top: 20px;
 }
-
 .result-item {
     padding: 10px;
     border: 1px solid #ccc;
