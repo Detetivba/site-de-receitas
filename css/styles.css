@@ -203,4 +203,13 @@ button:hover {
     cursor: pointer;
     transition: color 0.2s ease;
 }
+main {
+    flex: 1;
+    padding: 20px;
+    margin-top: 20px;
+}main {
+    flex: 1;
+    padding: 20px;
+    margin-top: 20px;
+}
 
