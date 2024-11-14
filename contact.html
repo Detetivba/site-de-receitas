@@ -20,5 +20,34 @@
     <h1>Tell: (16) 99140-1760</h1>
     <h1>gmail: lucassvieira08@gmail.com</h1>
     <p>  Dev: Lucas Sant'Ana Vieira</p>
+      <section>
+            <h2>Contato</h2>
+            <form id="contactForm">
+                <label for="name">Nome:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Mensagem:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="confirmationMessage" style="display: none;"></div>
+        </section>
+        <section>
+            <h2>Avalie nosso atendimento:</h2>
+            <div id="starRating">
+                <span data-star="1" class="star">&#9733;</span>
+                <span data-star="2" class="star">&#9733;</span>
+                <span data-star="3" class="star">&#9733;</span>
+                <span data-star="4" class="star">&#9733;</span>
+                <span data-star="5" class="star">&#9733;</span>
+            </div>
+            <p id="ratingMessage"></p>
+            
+        </section>
+  <script src="script.js"></script>
 </body>
 </html>
