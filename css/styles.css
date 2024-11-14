@@ -187,3 +187,20 @@ a h3 {
     margin-bottom: 5px;
     border-radius: 4px;
 }
+button {
+    background-color: #FFEB3B;
+    border: 1px solid #FFD54F;
+    padding: 10px 20px;
+    color: #333333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #FDD835;
+}#starRating .star {
+    font-size: 2rem;
+    color: #888888;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
